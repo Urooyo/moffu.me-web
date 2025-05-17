@@ -6,33 +6,49 @@ import { Container } from "@mui/material";
 import { Stack } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box } from "@mui/material";
-import { IconButton } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+// import { IconButton } from "@mui/material";
+// import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import theme from "@/theme";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
+import AlertDialog from "../component/dialog";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
     <Container sx={{ margin: 0, marginX: "auto", paddingX: 2 }}>
       <ThemeProvider theme={theme}>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box>
           <AppBar position="static">
             <Toolbar>
-              <IconButton
+              {/* <IconButton
                 size="large"
                 edge="start"
                 aria-label="menu"
                 sx={{ mr: 2, color: 'var(--foreground)' }}
                 >
                   <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)">
-                Moffu
-              </Typography>
-              <Button href="https://moffu.me" target="_blank" rel="noopener noreferrer">Moffu.me</Button>
+              </IconButton> */}
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)">
+                  Moffu
+                </Typography>
+                <Link href="/">
+                  <Button variant="text"><Typography variant="body1">홈</Typography></Button>
+                </Link>
+                <AlertDialog></AlertDialog>
+                <Link href="https://moffu.me/box">
+                  <Button variant="text"><Typography variant="body1" color="var(--foreground)">떨굼상자</Typography></Button>
+                </Link>
+              </div>
+              <Box sx={{ flexGrow: 1 }}></Box>
+              <Button href="https://moffu.me" target="_blank" rel="noopener noreferrer"><Typography variant="body1" color="var(--foreground)">Moffu.me</Typography></Button>
+              <Link href="/">
+                <Button variant="text"><Typography variant="h5">♧</Typography></Button>
+              </Link>
             </Toolbar>
           </AppBar>
         </Box>
