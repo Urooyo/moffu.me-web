@@ -46,7 +46,7 @@ export default function Home() {
               </div>
               <Box sx={{ flexGrow: 1 }}></Box>
               <Button href="https://moffu.me" target="_blank" rel="noopener noreferrer"><Typography variant="body1" color="var(--foreground)">Moffu.me</Typography></Button>
-              <Link href="/">
+              <Link href="/"> 
                 <Button variant="text"><Typography variant="h5">♧</Typography></Button>
               </Link>
             </Toolbar>
