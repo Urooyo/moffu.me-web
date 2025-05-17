@@ -53,6 +53,7 @@ export default function Home() {
           </AppBar>
         </Box>
         <Container sx={{ margin: 0 }}>
+          <Typography variant="body1">환영합니다! 여기는요,</Typography>
           <Typography variant="h2">보랏빛 고양이의 서랍!</Typography>
           <Typography variant="body1" color="var(--foreground)" marginTop={0.5}>Mui로 간단하게 만들어봤어요.</Typography>
           <Stack direction="row" gap={1} marginTop={2}>
