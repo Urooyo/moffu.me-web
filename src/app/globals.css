@@ -14,18 +14,21 @@
   font-family: 'Ownglyph BERRY RW';
   src: url('../theme/fonts/Ownglyph_BERRY_RW.woff2') format('woff2-variations');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Ownglyph PDH';
   src: url('../theme/fonts/Ownglyph_PDH.woff2') format('woff2-variations');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Pretendard JP Variable';
   src: url('../theme/fonts/PretendardJPVariable.woff2') format('woff2-variations');
   font-weight: normal;
+  font-display: swap;
 }
 
 html,
