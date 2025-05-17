@@ -29,9 +29,11 @@ const theme = createTheme({
     button: {
       fontFamily: 'Ownglyph PDH',
       textTransform: 'none',
+      fontSize: "16px",
     },
     body1: {
       fontFamily: 'Ownglyph BERRY RW',
+      fontSize: "16px",
     },
     body2: {
       fontFamily: 'Ownglyph BERRY RW',
