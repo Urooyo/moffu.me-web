@@ -1,95 +1,60 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+import { Button } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import { Container } from "@mui/material";
+import { Stack } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+
+const testt = createTheme({
+  palette: {
+    primary: {
+      main: "#694AFA",
+    },
+  },
+  typography: {
+    fontFamily: `'Pretendard JP Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif`,
+  },
+  shape: {
+    borderRadius: 40
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+        boxShadow: "none",
+        backgroundColor: "var(--background)",
+        justifyContent: "center",
+        }
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          boxShadow: Array(25).fill("none"),
+        }
+      }
+    },
+  },
+});
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <Container sx={{ margin: 0, marginX: "auto", paddingX: 2 }}>
+      <ThemeProvider theme={testt}>
+        <AppBar position="static" sx={{ height: 42, padding: 3 }}>
+          <Typography variant="h6" component="div" color="var(--foreground)">앱 바 헤딩</Typography>
+        </AppBar>
+        <Container sx={{ margin: 0 }}>
+          <Typography variant="h1" fontWeight={700}>헤딩</Typography>
+          <Typography variant="body1" color="var(--foreground)" marginTop={0.5}>Mui로 간단하게 만들어봤어요.</Typography>
+          <Stack direction="row" gap={1} marginTop={2}>
+            <Button variant="contained">메인 버튼</Button>
+            <Button variant="outlined">아웃라인 버튼</Button>
+          </Stack>
+        </Container>
+      </ThemeProvider>
+    </Container>
   );
 }
