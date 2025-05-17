@@ -1,0 +1,12 @@
+{
+  "AppBar": {
+    "site-title": "moffu",
+    "memu-home": "홈",
+    "memu-small-blog": "작은 기록장",
+    "memu-box": "떨굼상자"
+  },
+  "Home": {
+    "text-sub-title": "환영합니다! 여기는요,",
+    "text-title": "보랏빛 고양이의 서랍!"
+  }
+}
