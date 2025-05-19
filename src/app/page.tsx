@@ -1,11 +1,9 @@
 "use client"
-import { Button, Toolbar } from "@mui/material";
-import AppBar from '@mui/material/AppBar';
+import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import { Container } from "@mui/material";
 import { Stack } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import { Box } from "@mui/material";
 // import { IconButton } from "@mui/material";
 // import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -13,10 +11,7 @@ import theme from "@/theme";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import AlertDialog from "../component/dialog";
 import AppBarUI from "@/component/AppBarUI";
-
-import Link from "next/link";
 
 export default function Home() {
   return (
