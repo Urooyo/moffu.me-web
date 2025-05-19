@@ -14,6 +14,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AlertDialog from "../component/dialog";
+import AppBarUI from "@/component/AppBarUI";
 
 import Link from "next/link";
 
@@ -21,37 +22,7 @@ export default function Home() {
   return (
     <Container sx={{ margin: 0, marginX: "auto", paddingX: 2 }}>
       <ThemeProvider theme={theme}>
-        <Box>
-          <AppBar position="static">
-            <Toolbar>
-              {/* <IconButton
-                size="large"
-                edge="start"
-                aria-label="menu"
-                sx={{ mr: 2, color: 'var(--foreground)' }}
-                >
-                  <MenuIcon />
-              </IconButton> */}
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)">
-                  Moffu
-                </Typography>
-                <Link href="/">
-                  <Button variant="text"><Typography variant="body1">홈</Typography></Button>
-                </Link>
-                <AlertDialog></AlertDialog>
-                <Link href="https://moffu.me/box">
-                  <Button variant="text"><Typography variant="body1" color="var(--foreground)">떨굼상자</Typography></Button>
-                </Link>
-              </div>
-              <Box sx={{ flexGrow: 1 }}></Box>
-              <Button href="https://moffu.me" target="_blank" rel="noopener noreferrer"><Typography variant="body1" color="var(--foreground)">Moffu.me</Typography></Button>
-              <Link href="/"> 
-                <Button variant="text"><Typography variant="h5">♧</Typography></Button>
-              </Link>
-            </Toolbar>
-          </AppBar>
-        </Box>
+        <AppBarUI></AppBarUI>
         <Container sx={{ margin: 0 }}>
           <Typography variant="body1">환영합니다! 여기는요,</Typography>
           <Typography variant="h2">보랏빛 고양이의 서랍!</Typography>
