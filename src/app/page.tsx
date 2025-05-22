@@ -11,13 +11,11 @@ import theme from "@/theme";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import AppBarUI from "@/component/AppBarUI";
 
 export default function Home() {
   return (
     <Container sx={{ margin: 0, marginX: "auto", paddingX: 2 }}>
       <ThemeProvider theme={theme}>
-        <AppBarUI></AppBarUI>
         <Container sx={{ margin: 0 }}>
           <Typography variant="body1">환영합니다! 여기는요,</Typography>
           <Typography variant="h2">보랏빛 고양이의 서랍!</Typography>
