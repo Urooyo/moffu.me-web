@@ -26,7 +26,7 @@ export default function AppBarUI() {
                 >
                   <MenuIcon />
               </IconButton> */}
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <Box style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)" paddingLeft={2}>
                   Moffu
                 </Typography>
@@ -42,7 +42,7 @@ export default function AppBarUI() {
                     <Typography variant="body1" color="var(--foreground)">떨굼상자</Typography>
                   </Link>
                 </Box>
-              </div>
+              </Box>
               <Box sx={{ flexGrow: 1 }}></Box>
               <Button href="https://moffu.me" target="_blank" rel="noopener noreferrer"><Typography variant="body1" color="var(--foreground)">Moffu.me</Typography></Button>
               <Link href="/"> 
