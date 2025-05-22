@@ -34,7 +34,7 @@ export default function AlertDialog() {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            이 페이지는 API를 사용해요. 최대 요청 수가 있으니 여러번 들어가시거나 등 나쁜 짓은 하지 말아주세요, 부탁합니다!
+            이 페이지는 API를 사용해요. 최대 요청 수가 있으니 여러번 입장하거나 새로고침을 여러번 하는 행위는 자제해주세요.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
