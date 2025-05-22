@@ -4,16 +4,19 @@ import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import { Box } from "@mui/material";
 import AlertDialog from "./dialog";
+import theme from "@/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import { Container } from "@mui/material";
 
 import Link from "next/link";
 
 
 export default function AppBarUI() {
   return (
-    <div>
-      <div>
+    <ThemeProvider theme={theme}>
+      <Container sx={{ margin: 0, marginX: "auto", paddingX: 2 }}>
         <Box>
-          <AppBar position="static">
+          <AppBar position="fixed">
             <Toolbar>
               {/* <IconButton
                 size="large"
@@ -24,7 +27,7 @@ export default function AppBarUI() {
                   <MenuIcon />
               </IconButton> */}
               <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)">
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)" paddingLeft={2}>
                   Moffu
                 </Typography>
                 <Box display={"flex"} gap={1.2} alignItems={"center"} marginLeft={3}>
@@ -45,7 +48,7 @@ export default function AppBarUI() {
             </Toolbar>
           </AppBar>
         </Box>
-      </div>
-    </div>
+      </Container>
+    </ThemeProvider>
   );
 }
