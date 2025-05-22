@@ -1,11 +1,11 @@
 'use client'
 
-import { PortableText } from 'next-sanity';
+import { Any, PortableText } from 'next-sanity';
 import theme from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
 
-export default function BlogClient({ posts }: { posts: any[] }) {
+export default function BlogClient({ posts }: { posts: Any[] }) {
   return (
     <Container>
       <ThemeProvider theme={theme}>
