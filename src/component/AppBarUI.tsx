@@ -30,11 +30,14 @@ export default function AppBarUI() {
                 <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)" paddingLeft={2}>
                   Moffu
                 </Typography>
-                <Box display={"flex"} gap={1.2} alignItems={"center"} marginLeft={3}>
+                <Box display={"flex"} gap={2} alignItems={"center"} marginLeft={3}>
                   <Link href="/">
                     <Typography variant="body1" color="var(--foreground)">홈</Typography>
                   </Link>
-                  <AlertDialog></AlertDialog>
+                  <Link href="memo/">
+                    <Typography variant="body1" color="var(--foreground)">작은 기록장</Typography>
+                  </Link>
+                  {/* <AlertDialog></AlertDialog> */}
                   <Link href="https://moffu.me/box">
                     <Typography variant="body1" color="var(--foreground)">떨굼상자</Typography>
                   </Link>
