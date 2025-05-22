@@ -3,7 +3,7 @@ import { Button, Toolbar } from "@mui/material";
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import { Box } from "@mui/material";
-import AlertDialog from "./dialog";
+// import AlertDialog from "./dialog";
 import theme from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material";
