@@ -1,5 +1,5 @@
 "use client"
-import { Button, Toolbar } from "@mui/material";
+import { Button, Icon, SvgIcon, Toolbar } from "@mui/material";
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import { Box } from "@mui/material";
@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import theme from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Link from "next/link";
 
@@ -27,10 +28,14 @@ export default function AppBarUI() {
                   <MenuIcon />
               </IconButton> */}
               <Box style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)" paddingLeft={2}>
-                  Moffu
-                </Typography>
-                <Box display={"flex"} gap={2} alignItems={"center"} marginLeft={3}>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} color="var(--foreground)" paddingLeft={2}>
+                    Moffu
+                  </Typography>
+                  <ArrowDropDownIcon sx={{ color: "var(--foreground)", marginLeft: 0.5 }} />
+                </Box>
+                
+                <Box display={"flex"} gap={2} alignItems={"center"} marginLeft={2.3}>
                   <Link href="/">
                     <Typography variant="body1" color="var(--foreground)">홈</Typography>
                   </Link>
