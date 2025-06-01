@@ -11,21 +11,22 @@ import theme from "@/theme";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    <Container sx={{ margin: 0, marginX: "auto", paddingX: 2 }}>
+    <Box>
       <ThemeProvider theme={theme}>
-        <Container sx={{ margin: 0 }}>
+        <Box sx={{ margin: 3 }}>
           <Typography variant="body1">환영합니다! 여기는요,</Typography>
-          <Typography variant="h2">보랏빛 고양이의 서랍!</Typography>
+          <Typography variant="h2" fontWeight={400}>보랏빛 고양이의 서랍!</Typography>
           <Typography variant="body1" color="var(--foreground)" marginTop={0.5}>Mui로 간단하게 만들어봤어요.</Typography>
-          <Stack direction="row" gap={1} marginTop={2}>
+          <Box sx={{ width: '100%', height: 20}}></Box>
+          <Stack direction="row" gap={1} marginTop={2}> 
             <Button variant="contained" size="medium">메인 버튼</Button>
-            <Button variant="outlined" size="medium">아웃라인 버튼</Button>
             <Button variant="text" size="medium">텍스트 버튼</Button>
           </Stack>
-        </Container>
+        </Box>
 
         <Stack marginTop={3}>
           <Accordion>
@@ -70,6 +71,6 @@ export default function Home() {
           </Accordion>
         </Stack>
       </ThemeProvider>
-    </Container>
+    </Box>
   );
 }
